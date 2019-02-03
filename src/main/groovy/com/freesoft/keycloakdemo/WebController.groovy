@@ -22,7 +22,7 @@ class WebController {
     def index() { "external" }
 
     @GetMapping(path = "/customers")
-    String customers(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, KeycloakPrincipal principal, Model model) {
+    String customers(HttpServletRequest httpServletRequest, Model model) {
         RefreshableKeycloakSecurityContext context = httpServletRequest.getAttribute(KeycloakSecurityContext.class.getName())
         def username = context.token.preferredUsername
         Iterable<Customer> customers = customerDAO.findAll()
