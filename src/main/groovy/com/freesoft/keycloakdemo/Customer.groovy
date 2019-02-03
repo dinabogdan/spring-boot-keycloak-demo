@@ -14,7 +14,7 @@ class Customer {
 
     private String name
     private String serviceRendered
-    private String addres
+    private String address
 
     Long getId() {
         return id
@@ -41,10 +41,10 @@ class Customer {
     }
 
     String getAddress() {
-        return addres
+        return address
     }
 
     void setAddress(String address) {
-        this.addres = address
+        this.address = address
     }
 }
